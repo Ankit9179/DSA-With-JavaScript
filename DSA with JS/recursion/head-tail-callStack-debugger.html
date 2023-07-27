@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      ////////////to understanding debugger and callstack in browser inspact tool,source
+      //   function elephant() {
+      //     let data = 9;
+      //     console.log(data);
+      //   }
+      //   function dog() {
+      //     elephant();
+      //   }
+      //   function cat() {
+      //     dog();
+      //   }
+      //   function ball() {
+      //     cat();
+      //   }
+      //   function apple() {
+      //     ball();
+      //   }
+      //   apple();
+
+      //////////////////////////////////////////////////////////////////////////////
+      //to understanding head and tail => direct recursion or we can say recursion
+
+      function apple(x) {
+        // console.log(x); //head recursion => this console execute befor calling function and print 5,4,3,2,1,0
+        if (x > 0) {
+          apple(x - 1);
+        }
+        console.log(x); //tail recursion => this console execute when your alll function called and your function outgoing from callstack functions
+      }
+      let num = 5;
+      apple(num);
+    </script>
+  </head>
+  <body></body>
+</html>

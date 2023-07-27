@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script lang="javascript" type="text/javascript">
+      function getCookie() {
+        if (document.myform.coo.value === "") {
+          alert("enter something");
+          return;
+        }
+        var val = escape(document.myform.coo.value) + ";";
+        document.cookie = "Cookies Name =" + val;
+        document.write(val);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myform" action="">
+      enter name<input type="text" name="coo" />
+      <input type="button" value="click me" onclick="getCookie()" />
+    </form>
+  </body>
+</html>

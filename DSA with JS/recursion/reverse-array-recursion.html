@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /////////////////////////////////////////////////////////////////
+      //reverse array with recursion function
+      let arr = [33, 5, 444, 2, 77, 8, 0, 6, 220];
+      let temp; //temporary variable for storing value
+
+      function reverseArray(arr, start, end) {
+        console.log(arr);
+        if (start <= end) {
+          temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          reverseArray(arr, start + 1, end - 1); //again calling
+        }
+      }
+      reverseArray(arr, 0, arr.length - 1);
+
+      /////////////////////////////////////////////////////
+      //reverse array with js reverse method
+      //   let arr = [1, 2, 3, 4, 5, 6];
+      //   let res = arr.reverse();
+      //   console.log([res]);
+    </script>
+  </head>
+  <body></body>
+</html>

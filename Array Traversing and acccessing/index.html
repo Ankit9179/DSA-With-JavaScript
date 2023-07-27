@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>array traversing and accessing</title>
+  </head>
+  <body>
+    <br />
+    <br /><br /><br />
+    Array = [2, 47, 33, 5, 78, 5, 68, 22, 90]<br />
+    <input type="text" id="inp" />
+    <button onclick="getInput()" id="btn">Click me</button>
+
+    <script>
+      let arr = [2, 47, 33, 5, 78, 5, 68, 22, 90];
+
+      function getInput() {
+        let inpu = document.getElementById("inp").value;
+        let tv = typeof inpu;
+        if (inpu <= arr.length && typeof parseInt(inpu) === "number") {
+          alert(arr[inpu]);
+        } else {
+          alert("enter wirte input");
+        }
+      }
+    </script>
+  </body>
+</html>

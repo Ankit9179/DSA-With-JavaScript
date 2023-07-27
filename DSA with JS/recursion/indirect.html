@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   //indirect recursion function
+      //   ////////////////////////////////////////////////////////////////////////////
+      //   //Q.how much apple you can buy with 100 RS ,price of apple = 10
+      //   let money = 100; //you have 100 $
+      //   let totalApple = 0;
+
+      //   function buyApple(x) {
+      //     if (x > 0) {
+      //       console.log("i have  ", x, "RS", "and Apple", totalApple);
+      //       buyMore(x);
+      //     } else {
+      //       console.log("i don't have more mony and total appple", totalApple);
+      //     }
+      //   }
+
+      //   function buyMore(y) {
+      //     totalApple++;
+      //     buyApple(y - 10);
+      //   }
+
+      //   buyApple(money);
+      //////////////////////////////////////////////////////////////////////
+      //Q.interview question = why  getting output clg top 5-0 and clg bottom 0-5
+      function test(x) {
+        console.log(x); // clg top {5,4,3,2,1,0}
+        if (x > 0) {
+          test(x - 1);
+        }
+        console.log(x); //clg bottom {0,1,2,3,4,5}
+      }
+      let a = 5;
+      test(a);
+    </script>
+  </head>
+  <body></body>
+</html>
