@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /////////////////////////////////////////////////
+      //STACK => 1.stack is a very useful DS and has a wide range of aplication
+      //         2.stack data stracture is a linear data stracture in which addition and removeal element follows a particular order like filo and lifo
+
+      let data = []; // empty stack
+      let currentSize = data.length; // clg output = 0
+      let max = 4;
+
+      //
+      function push(newVal) {
+        if (currentSize >= max) {
+          alert("stack has full i can't add element " + newVal);
+        }
+        data[currentSize] = newVal;
+        currentSize += 1;
+      }
+
+      //
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("staack is already empty");
+        }
+      }
+
+      push(11);
+      push(22);
+      push(33);
+      push(44);
+      pop();
+      pop();
+      pop();
+      pop();
+      pop();
+
+      console.log(data);
+      console.log(currentSize);
+    </script>
+  </head>
+  <body></body>
+</html>
