@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = [];
+      let currentval = arr.length; //number of element in array = 0
+      let max = 5;
+
+      function push() {
+        let newVal = document.getElementById("num").value;
+        if (currentval >= max) {
+          alert("i can not add more value" + newVal);
+        } else {
+          arr[currentval] = newVal;
+          currentval += 1;
+          console.log("value add");
+          document.getElementById("num").value = "";
+        }
+      }
+
+      function pop() {
+        if (currentval > 0) {
+          currentval -= 1;
+          arr.length = currentval;
+        } else {
+          alert("stack already empty");
+        }
+      }
+
+      function display() {
+        if (arr == "") {
+          console.log("stack blanck");
+        } else {
+          for (let i = 0; i <= currentval - 1; i++) {
+            console.log(arr[i]);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter a number" id="num" />
+    <button onclick="push()">add element to stack</button>
+    <button onclick="pop()">remove element to stack</button>
+    <button onclick="display()">display all element</button>
+  </body>
+</html>
