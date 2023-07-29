@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // it's not easy for me
+      class Stack {
+        item = [];
+        currentVal;
+        max;
+        constructor(size) {
+          this.max = size;
+          this.currentVal = this.item.length;
+        }
+        puch(newval) {
+          if (this.currentVal >= this.max) {
+            alert("stack is full");
+          } else {
+            this.item[this.currentVal] = newval;
+            this.currentVal++;
+          }
+        }
+        pop() {
+          if ((this.item[this.currentVal] = 0)) {
+            console.log("stack already empty");
+          } else {
+            this.currentVal--;
+            this.item.length = this.currentVal;
+          }
+        }
+        display() {
+          console.log(this.item);
+        }
+      }
+      c1 = new Stack(5);
+      c1.puch(30);
+      c1.puch(3);
+      c1.puch(5);
+      c1.puch(8);
+      c1.puch(9);
+      c1.pop();
+      c1.display();
+    </script>
+  </head>
+  <body></body>
+</html>
