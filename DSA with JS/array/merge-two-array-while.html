@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /////////////////////////////////////////////////////////////
+      //merge two array with while loop and array should be shorted
+      let arr1 = [11, 22, 33, 44, 99, 100];
+      let arr2 = [55, 66, 77, 88];
+      let arr3 = [];
+      let a = 0;
+      let b = 0;
+      let c = 0;
+      while (a < arr1.length && b < arr2.length) {
+        if (arr1[a] < arr2[b]) {
+          arr3[c] = arr1[a];
+          a++;
+        } else {
+          arr3[c] = arr2[b];
+          b++;
+        }
+        c++;
+      }
+      while (a < arr1.length) {
+        arr3[c] = arr1[a];
+        a++;
+        c++;
+      }
+      console.log(arr3);
+      // line = 21 + 10 => 31 time complexity
+    </script>
+  </head>
+  <body></body>
+</html>
