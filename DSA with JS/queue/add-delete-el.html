@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      ////////////////////////////////////////////////////////////////////////////////////////
+      //defination of queue in   geeks for geeks
+
+      let queue = [];
+      let currentSize = queue.length; //0
+      let max = 5;
+
+      //add element on queue
+      function enqueue(newVal) {
+        if (currentSize >= max) {
+          alert("queue is full");
+        } else {
+          queue[currentSize] = newVal;
+          currentSize++;
+        }
+      }
+
+      //delete element from queue
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+          }
+          // queue.pop();
+          currentSize--;
+          queue.length = currentSize;
+        } else {
+          alert("queue is aleady empty");
+        }
+      }
+
+      //display res
+      function display() {
+        console.log(queue);
+      }
+
+      enqueue(3);
+      enqueue(4);
+      enqueue(5);
+      dequeue();
+      display();
+    </script>
+  </head>
+  <body>
+    <h1>queue ds with js</h1>
+  </body>
+</html>
