@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      ////////////////////////////////// leare front ,rear,empty => front is a  first element in queue ==> rear is a last element of queue
+      //start old question enqueue and dequeue
+
+      let arr = []; //queue
+      let currentSize = arr.length; //0
+      let maxSize = 5;
+
+      function enqueue(newVal) {
+        if (currentSize >= maxSize) {
+          alert("queue is full");
+        } else {
+          arr[currentSize] = newVal;
+          currentSize++;
+        }
+      }
+
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i + 1];
+          }
+          currentSize--;
+          arr.length = currentSize;
+        } else {
+          alert("queue is already empty");
+        }
+      }
+
+      function front() {
+        if (currentSize > 0) {
+          console.log(arr[0]);
+        } else alert("queue is already empty");
+      }
+
+      function rear() {
+        if (currentSize > 0) {
+          console.log(arr[currentSize - 1]);
+        } else alert("queue is already empty");
+      }
+
+      //front of queue
+      function displayRes() {
+        console.log(arr);
+      }
+
+      enqueue(2);
+      enqueue(5);
+      enqueue(3);
+      dequeue();
+      displayRes();
+      front();
+      rear();
+    </script>
+  </head>
+  <body></body>
+</html>
