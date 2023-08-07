@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //////////////////////////////////////
+      // 1.array must be sorted 2.find num 3.start point 4.end point 5.position and you need a mid point
+      let arr = [1, 2, 3, 4];
+      let find = 4;
+      let start = 0;
+      let end = arr.length - 1; // 0-3
+      let position = undefined;
+      while (start <= end) {
+        let mid = Math.floor((start + end) / 2); // =1
+        if (arr[mid] === find) {
+          position = mid;
+          break;
+        } else if (arr[mid] < find) {
+          start = mid + 1;
+        } else {
+          end = mid - 1;
+        }
+      }
+      console.log(position);
+
+      //   let arr = [3, 44, 55, 67, 68, 99, 102]; //sorted array
+      //   let find = 44;
+      //   let start = 0;
+      //   let end = arr.length - 1; // 0-6
+      //   let position = undefined;
+      //   while (start <= end) {
+      //     let mid = Math.floor((start + end) / 2); //3
+      //     if (arr[mid] === find) {
+      //       position = mid;
+      //       break;
+      //     } else if (arr[mid] < find) {
+      //       start = mid + 1;
+      //     } else {
+      //       end = mid - 1;
+      //     }
+      //   }
+      //   console.log(position);
+    </script>
+  </head>
+  <body></body>
+</html>
