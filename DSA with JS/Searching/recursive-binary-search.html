@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //////////////////////////////////////////////
+      //Q. recursive binary search
+      let arr = [10, 20, 30, 40, 50];
+      let start = 0;
+      let end = arr.length - 1; //4
+      let find = 40;
+      let position = undefined;
+
+      //function
+      function recursiveSearch(data, s, e) {
+        let mid = Math.floor((s + e) / 2);
+        if (data[mid] === find) {
+          position = mid;
+          return true;
+        } else if (data[mid] < find) {
+          recursiveSearch(data, mid + 1, e);
+        } else {
+          recursiveSearch(data, s, mid - 1);
+        }
+      }
+      recursiveSearch(arr, start, end);
+      console.log(position);
+    </script>
+  </head>
+  <body></body>
+</html>
