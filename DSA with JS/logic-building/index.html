@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //////////////////////////////////////////////
+      //find even values from array , make double of every element and find length of the array manually
+
+      //Answer - take 3-5 minutes to understanding and reading question. firstly you must solve these quistion on paper without programming .than now you should write code on your IDE
+
+      //   //brute force approach
+      //   let arr = [2, 7, 20, 79, 48, 93, 50, 33]; // our array
+      //   let newArr = [];
+      //   for (let i = 0; i < arr.length; i++) {
+      //     // console.log(arr[i] % 2);
+      //     if (arr[i] % 2 == 0) {
+      //       newArr.push(arr[i]);
+      //     }
+      //   }
+      //   console.log(newArr); //even array
+      //   for (let i = 0; i < newArr.length; i++) {
+      //     newArr[i] *= 2;
+      //   }
+      //   console.log(newArr); //double
+
+      //   let count = 0;
+
+      //   for (let i = 0; i < newArr.length; i++) {
+      //     count++;
+      //   }
+      //   console.log(count);
+
+      //better approach///////////////////////////////////////////////
+      let arr = [2, 7, 20, 79, 48, 93, 50, 33]; // our array
+      let newArr = [];
+      let count = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+          count++;
+          newArr.push(arr[i] * 2);
+        }
+      }
+
+      console.log(newArr); //double
+
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>
