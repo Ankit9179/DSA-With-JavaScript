@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function chekAngam(srt1, str2) {
+        let Objstr1 = {};
+        if (srt1.length !== str2.length) {
+          return false;
+        }
+
+        for (ch of srt1) {
+          //   console.log(ch);
+          Objstr1[ch] = (Objstr1[ch] || 0) + 1;
+        }
+        for (ch of str2) {
+          //   console.log(Objstr1[ch]);
+          if (!Objstr1[ch]) {
+            return false;
+          }
+          Objstr1[ch]--;
+        }
+        // console.log(Objstr1);
+        return true;
+        console.log("this obj is anagram");
+      }
+      console.log(chekAngam("hello", "elloh"));
+    </script>
+  </head>
+  <body></body>
+</html>
